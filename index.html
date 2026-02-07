@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chaos Garden</title>
+  <link rel="icon" type="image/x-icon" href="flowers.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+
+  <!-- INTRO SCREEN -->
+<section id="intro" class="intro">
+  <div class="intro-content">
+    <h1>Hello, 은영🌸</h1>
+    <p>Let today be gentle.</p>
+    <button id="startBtn">Start the day</button>
+  </div>
+</section>
+
+
+  <!-- MAIN APP -->
+  <main class="app hidden">
+
+    <!-- QUOTE -->
+    <p id="topQuote" class="top-quote"></p>
+
+    <!-- PEACE WINDOW -->
+<div class="peace-window">
+  <img id="peaceImage" src="images/peace/1.jpg" alt="Peaceful moment" />
+</div>
+
+    <!-- CENTER AREA -->
+    <section class="center">
+
+      <!-- MUSIC CD -->
+      <div class="music-area">
+
+  <!-- Vinyl (visual only) -->
+  <div><img src="vinyl2.png" class="vinyl" alt="Vinyl Disc">
+</div>
+
+  <!-- Spotify player (functional) -->
+  <iframe
+    class="spotify-bar"
+    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4WYpdgoIcn6"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy">
+  </iframe>
+
+</div>
+      
+
+      <!-- TASKS -->
+      <div class="tasks">
+        <div class="tabs">
+          <button class="tab active" data-tab="little">Little things</button>
+          <button class="tab" data-tab="norush">No rush</button>
+          <button class="tab" data-tab="whenever">Whenever</button>
+        </div>
+
+        <button id="addTaskBtn" class="add-task">＋ Add task</button>
+
+        <ul id="taskList"></ul>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      This doesn’t need to be used. Like you, it's whole by existing just existing.
+    </footer>
+
+  </main>
+
+  <!-- TASK MODAL -->
+  <div id="taskModal" class="modal hidden">
+    <div class="modal-content">
+      <input id="taskInput" placeholder="Write it gently…" />
+      <div class="modal-actions">
+        <button id="confirmTask">Add</button>
+        <button id="cancelTask">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
