@@ -4,6 +4,14 @@ const startBtn = document.getElementById("startBtn");
 
 const vinyl = document.getElementById("vinyl");
 
+const savedTasks = localStorage.getItem("tasks");
+if (savedTasks) {
+  tasks = JSON.parse(savedTasks);
+}
+
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 startBtn.addEventListener("click", () => {
   intro.classList.add("hidden");
@@ -11,6 +19,7 @@ startBtn.addEventListener("click", () => {
 
 
   vinyl.style.animationPlayState = "running";
+  
 });
 
 
@@ -92,7 +101,7 @@ const peaceImages = [
   "7.png",
   "8.png",
   "9.png",
-  "10.png"
+  "10.png",
 ];
 
 const peaceEl = document.getElementById("peaceImage");
@@ -170,6 +179,7 @@ document.getElementById("confirmTask").onclick = () => {
     renderTasks();
   }
 };
+
 
 
 
