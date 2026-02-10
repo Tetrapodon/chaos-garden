@@ -1,3 +1,23 @@
+/* Default styles for larger screens */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column; /* Stacks items vertically */
+  }
+}
+
+
+
 * {
   box-sizing: border-box;
   font-family: system-ui, sans-serif;
@@ -294,10 +314,11 @@ body {
 
 
 .peace-window {
-  width: 220px;
-  height: 220px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 30px;
   box-shadow: 0 0 25px rgba(160, 120, 255, 0.35);
 }
 
@@ -306,6 +327,106 @@ body {
   height: 100%;
   object-fit: cover;
   transition: opacity 1.2s ease;
+}
+
+
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  .app {
+    padding: 20px 14px;
+  }
+
+  .top-quote {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+  }
+
+  .center {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .music-area {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .vinyl {
+    width: 120px;
+    height: 120px;
+  }
+
+  .spotify-bar {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tasks {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tabs {
+    justify-content: center;
+  }
+
+  #taskList li {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .delete {
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+  .peace-window {
+    width: 180px;
+    height: 180px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 30px;
+  }
+}
+
+#dog {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  width: 140px;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: dogIdle 6s ease-in-out infinite;
+}
+
+#dog img {
+  width: 100%;
+  display: block;
+}
+
+/* subtle idle motion */
+@keyframes dogIdle {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-2px) rotate(0.5deg); }
+  50%  { transform: translateY(0) rotate(0deg); }
+  75%  { transform: translateY(1px) rotate(-0.5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+  #dog {
+    width: 70px;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0.85;
+  }
 }
 
 
