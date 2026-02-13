@@ -120,7 +120,7 @@ setInterval(() => {
     peaceEl.src = peaceImages[peaceIndex];
     peaceEl.style.opacity = 1;
   }, 700);
-}, 15000);
+}, 6000);
 
 
 /* TASKS */
@@ -179,6 +179,7 @@ document.getElementById("confirmTask").onclick = () => {
     renderTasks();
   }
 };
+
 
 
 
